@@ -21,8 +21,21 @@ main {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions {
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+    font-size: 25px;
 }
 
 .dice-container {
@@ -40,9 +53,30 @@ main {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     background-color: white;
+    cursor: pointer;
 }
 
 .die-num {
   font-size: 2rem;
   font-weight: 700;
+}
+
+.dice-roll{
+    height: 50px;
+    width: 100px;
+    font-family: "karla", sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #5035FF;
+    cursor: pointer;
+}
+
+.dice-roll:focus {
+    outline: none;
+}
+
+.dice-roll:active{
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
