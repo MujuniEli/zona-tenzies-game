@@ -33,8 +33,8 @@ function App() {
   function randFace() {
     const diceFaces = [dice1, dice2, dice3, dice4, dice5, dice6]
     const randomIndex = Math.floor(Math.random() * diceFaces.length)
-    const finalFace = diceFaces.map(face => face[randomIndex])
-    return finalFace
+    
+    return diceFaces[randomIndex]
   }
 
   

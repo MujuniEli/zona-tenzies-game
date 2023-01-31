@@ -8,7 +8,8 @@ export default function Die(props) {
 
     return (
                <div className="die-face" style={styles} onClick={props.holdDice}>
-                        {props.value}
+                        
+                        <img className="die-num" src={props.value} alt="some name" />
                         
                </div> 
     )
