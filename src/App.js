@@ -26,15 +26,13 @@ function App() {
 
     if(allHeld && allSameValues){
       setTenzies(true)
-      
     }
   }, [dice])
 
   function randFace() {
     const diceFaces = [dice1, dice2, dice3, dice4, dice5, dice6]
     const randomIndex = Math.floor(Math.random() * diceFaces.length)
-    
-    return diceFaces[randomIndex]
+     return diceFaces[randomIndex]
   }
 
   
@@ -48,8 +46,9 @@ function App() {
     for(let i = 0; i < 10; i++){
       randomNumbers.push(generateRandomNumbers())
     }
-
+      
     return randomNumbers
+    
   }
 
   function rollDice(){
@@ -58,12 +57,17 @@ function App() {
         setDice(prevDice => prevDice.map(item => {
           return item.isHeld ? item : generateRandomNumbers()
         }))
+        setCount(currentCount => {
+          return currentCount + 1
+        })
+         
       } else {
 
               setTenzies(false)
               setDice(allNewDice())
+              setCount(0)
       }
-      setCount(count => count + 1) 
+      
   }
 
 
@@ -78,7 +82,8 @@ function App() {
       )
 
   return (
-    <main>
+    <div className="app">
+      <main>
       {tenzies && <Confetti />}
       <h1 className='title'>zona's Tenzies</h1>
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
@@ -88,6 +93,24 @@ function App() {
       <button className='dice-roll' onClick={rollDice}>{tenzies ? "New Game" : "Roll" }</button>
       <p>Number of Rolls: {count}</p>
     </main>
+    <aside className="stats">
+      <h3>Player Stats</h3>
+      <section className="player-details">
+        <div className="name-side">
+        <h4 className='details--heading'>Name</h4>
+        <p className='player-name'>Elijah</p>
+        </div>
+        
+        <div className="roll-side">
+        <h4 className='details--heading'>Roll Count</h4>
+        <p className='player-roll-count'>7</p>
+        </div>
+        
+      </section>
+      
+    </aside>
+    </div>
+    
   );
 }
 
