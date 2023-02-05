@@ -92,6 +92,7 @@ main {
     color: #F5F5F5;
     text-align: center;
     width: 30%;
+    border-left: 1px solid #F5F5F5;
 }
 
 .player-details {
@@ -102,4 +103,21 @@ main {
 .details--heading {
     border-bottom: 1px solid #F5F5F5;
     letter-spacing: 0.06em;
+}
+
+@media (max-width:1000px) {
+    .app{
+        display: block;
+    }
+
+    main {
+        margin-bottom: 3rem;
+    }
+
+    .stats {
+        margin: 0 auto;
+        
+        border-left: none;
+       
+    }
 }
