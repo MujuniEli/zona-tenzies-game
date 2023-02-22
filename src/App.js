@@ -87,6 +87,7 @@ function App() {
       {tenzies && <Confetti />}
       <h1 className='title'>zona's Tenzies</h1>
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+      <p><b>Elijah</b> is playing</p>
       <div className="dice-container">
         {newNumbers}
       </div>

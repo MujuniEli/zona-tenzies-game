@@ -121,3 +121,13 @@ main {
        
     }
 }
+
+@media (max-width:570px) {
+    .instructions {
+        font-size: 1.2rem;
+    }
+    .player-details {
+        font-size: 0.8rem;
+
+    }
+}
