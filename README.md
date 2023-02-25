@@ -37,10 +37,10 @@ This project was started in the course but I wanted to customize it and make the
 
 ## What I have learned
 
-Customizing this project from what we had in the course by adding features hasn't been easy but I have got the opportunity to fully grasp concepts like managing images in react ie importing and mapping through these images to properly display them. My understandinng of props and how we handle them has also been strengthened by this project
+Customizing this project from what we had in the course by adding features hasn't been easy but I have got the opportunity to fully grasp concepts like managing images in react ie importing and mapping through these images to properly display them. My understandinng of props and how we handle them has also been strengthened by this project.
 
 
 
 ## Continued Development
 
-This app is a work in progress as am adding features to personalize the gaming experince like player details and will also continously make the code more clean and DRY
+This app is a work in progress as am adding features to personalize the gaming experince like player details and will also continously make the code more clean and DRY.
