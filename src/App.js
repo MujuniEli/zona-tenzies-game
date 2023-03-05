@@ -9,6 +9,7 @@ import dice3 from './faces/dice3.png';
 import dice4 from './faces/dice4.png';
 import dice5 from './faces/dice5.png';
 import dice6 from './faces/dice6.png';
+import Start from './components/Start';
 import './App.css';
 
 
@@ -16,6 +17,7 @@ function App() {
   const [dice, setDice] = useState(allNewDice())
   const [tenzies, setTenzies] = useState(false)
   const [count, setCount] = useState(0)
+  const [game, setGame] = useState({pageview: 'index'})
 
   
   
@@ -28,6 +30,15 @@ function App() {
       setTenzies(true)
     }
   }, [dice])
+
+  function displayGame() {
+    setGame(prevState => {
+      return {
+        ...prevState,
+        pageview: 'dies'
+      }
+    })
+  }
 
   function randFace() {
     const diceFaces = [dice1, dice2, dice3, dice4, dice5, dice6]
@@ -83,6 +94,8 @@ function App() {
 
   return (
     <div className="app">
+      {game.pageview === 'index' && <Start displayGame={displayGame}/>}
+      {game.pageview === 'dies' && <>
       <main>
       {tenzies && <Confetti />}
       <h1 className='title'>zona's Tenzies</h1>
@@ -110,6 +123,7 @@ function App() {
       </section>
       
     </aside>
+    </> }
     </div>
     
   );
