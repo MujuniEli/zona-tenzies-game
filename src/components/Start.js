@@ -1,6 +1,15 @@
-
+import React, { useState } from "react"
 
 export default function Start({displayGame}) {
+
+    const [playerList, setPlayerList] = useState([])
+    const [player, setPlayer] = useState("")
+  
+  
+    function handleChange(event) {
+      setPlayer(event.target.value)
+    }
+
     return (
         <div>
             <h3>Add Your names below for a Unique experience</h3>
@@ -8,7 +17,7 @@ export default function Start({displayGame}) {
                 <input 
                 type="text"
                 placeholder="Add player name"
-
+                onChange={handleChange}
                 />
                 <button> + </button>
             </div>

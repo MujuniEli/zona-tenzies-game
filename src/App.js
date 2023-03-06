@@ -20,7 +20,6 @@ function App() {
   const [game, setGame] = useState({pageview: 'index'})
 
   
-  
   useEffect(()=> {
     const allHeld = dice.every(die =>  die.isHeld)
     const firstValue = dice[0].value
