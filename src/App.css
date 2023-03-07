@@ -17,6 +17,23 @@ body {
     justify-content: space-around;
 }
 
+.start-page {
+    background: #F5F7FB;
+    max-width: 700px;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.start-btn {
+    margin: 5em auto 0 auto;
+    
+   
+}
+
+.players {
+    display: flex;
+}
+
 main {
         background-color: #F5F5F5;
         height: 600px;
