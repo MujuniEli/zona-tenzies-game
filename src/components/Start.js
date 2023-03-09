@@ -29,10 +29,10 @@ export default function Start({displayGame}) {
                 {playerList.map((player) => {
                     return (
                         <div className="players">
-                            <h3>
+                            <h3 className="player-name">
                             {player}
                         </h3>
-                        <button> remove player </button>
+                        <button className="rm-btn"> - </button>
                         </div>
                         
                     )
