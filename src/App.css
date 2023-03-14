@@ -34,13 +34,18 @@ body {
     border-radius: 5px;
     border: 1px solid #D5D4D8;
     text-indent: 5px;
+    margin-right: 10px;
 }
 
-.form-btn {
+.form-btn, .start-btn {
+    height: 35px;
+    width: 100px;
+    font-family: "karla", sans-serif;
     border: none;
     border-radius: 6px;
     color: white;
     background-color: #5035FF;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -112,7 +117,7 @@ main {
     border-radius: 5px;
 }
 
-.dice-roll{
+.dice-roll {
     height: 50px;
     width: 150px;
     font-family: "karla", sans-serif;
