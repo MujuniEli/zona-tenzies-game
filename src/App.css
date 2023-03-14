@@ -19,7 +19,8 @@ body {
 
 .start-page {
     background: #F5F7FB;
-    max-width: 700px;
+    width: 90%;
+    max-width: 800px;
     padding: 2%;
     border-radius: 5px;
 }
