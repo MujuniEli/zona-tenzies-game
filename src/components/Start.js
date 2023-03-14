@@ -22,8 +22,9 @@ export default function Start({displayGame}) {
                 type="text"
                 placeholder="Add player name"
                 onChange={handleChange}
+                className="form-input"
                 />
-                <button onClick={addPlayer}> Add Player </button>
+                <button className="form-btn" onClick={addPlayer}> Add Player </button>
             </div>
             <div className="player-list">
                 {playerList.map((player) => {
