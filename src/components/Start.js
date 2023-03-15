@@ -16,7 +16,7 @@ export default function Start({displayGame}) {
 
     return (
         <div className="start-page">
-            <h3>Add Your names below to play</h3>
+            <p className="instructions">Add Your names below to play as a specific player or click <b>Start Game</b> to play anonymously!</p>
             <div className="player-name">
                 <input 
                 type="text"
