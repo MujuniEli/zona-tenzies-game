@@ -54,23 +54,27 @@ body {
 }
 
 .rm-btn {
-    height: 4rem;
-	border: none;
-	border-radius: 6px;
+    height: 2rem;
+    width: 2rem;
+	border: 1px solid #5035FF;
+	border-radius: 5px;
 	font-weight: 500;
 	font-size: 1.6rem;
-	text-decoration: none;
+	cursor: pointer;
 }
 
 .players {
     display: flex;
     margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .player-name {
     margin-right: 15px;
     font-size: 1.2em;
 }
+
 
 main {
         background-color: #F5F5F5;
