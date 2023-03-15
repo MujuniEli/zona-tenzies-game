@@ -30,9 +30,9 @@ export default function Start({displayGame}) {
                 {playerList.map((player) => {
                     return (
                         <div className="players">
-                            <h3 className="player-name">
+                            <p className="player-name">
                             {player}
-                        </h3>
+                        </p>
                         <button className="rm-btn"> - </button>
                         </div>
                         
