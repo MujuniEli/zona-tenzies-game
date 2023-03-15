@@ -64,6 +64,12 @@ body {
 
 .players {
     display: flex;
+    margin-top: 15px;
+}
+
+.player-name {
+    margin-right: 15px;
+    font-size: 1.2em;
 }
 
 main {

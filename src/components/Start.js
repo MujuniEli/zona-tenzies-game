@@ -31,7 +31,7 @@ export default function Start({displayGame}) {
                     return (
                         <div className="players">
                             <p className="player-name">
-                            {player}
+                            {player.charAt(0).toUpperCase() + player.slice(1)}
                         </p>
                         <button className="rm-btn"> - </button>
                         </div>
