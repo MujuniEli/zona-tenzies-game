@@ -65,7 +65,7 @@ body {
 
 .players {
     display: flex;
-    margin-top: 15px;
+    margin-top: 0.1em;
     align-items: center;
     justify-content: space-between;
 }
