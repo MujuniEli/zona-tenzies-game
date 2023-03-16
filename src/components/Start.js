@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { nanoid } from "nanoid"
 
 export default function Start({displayGame}) {
 
@@ -11,6 +12,9 @@ export default function Start({displayGame}) {
     }
 
     function addPlayer() { 
+        const player = {
+            id: nanoid()
+        }
         setPlayerList([...playerList, playerName])
     }
 
