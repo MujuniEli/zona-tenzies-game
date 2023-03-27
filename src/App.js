@@ -1,5 +1,5 @@
 
-import { useState,useEffect } from 'react';
+import { useState,useEffect, useContext } from 'react';
 import Die from "./components/Die"
 import { nanoid } from 'nanoid'
 import Confetti from 'react-confetti'
@@ -10,6 +10,7 @@ import dice4 from './faces/dice4.png';
 import dice5 from './faces/dice5.png';
 import dice6 from './faces/dice6.png';
 import Start from './components/Start';
+import { nameContext } from './components/Start';
 import './App.css';
 
 
