@@ -20,6 +20,8 @@ function App() {
   const [count, setCount] = useState(0)
   const [game, setGame] = useState({pageview: 'index'})
 
+  const { playerName } = useContext(nameContext)
+
   
   useEffect(()=> {
     const allHeld = dice.every(die =>  die.isHeld)
