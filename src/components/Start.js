@@ -3,6 +3,12 @@ import { nanoid } from "nanoid"
 
 export const nameContext = createContext()
 
+export function NameProvider({children}) {
+    return (
+        <nameContext.Provider value={{}}>{children}</nameContext.Provider>
+    )
+}
+
 export default function Start({displayGame}) {
 
     const [playerList, setPlayerList] = useState([])
@@ -32,7 +38,7 @@ export default function Start({displayGame}) {
     return (
         <div className="start-page">
             <p className="instructions">Add Your names below to play as a specific player or click <b>Start Game</b> to play anonymously!</p>
-            <nameContext.Provider value={{}}>
+            
             <div className="player">
                 <input 
                 type="text"
@@ -61,7 +67,6 @@ export default function Start({displayGame}) {
                     )
                 })}
             </div>
-            </nameContext.Provider>
             <button type="button" className="start-btn" onClick={displayGame}>Start Game</button>
         </div>
     )
