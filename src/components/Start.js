@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react"
 import { nanoid } from "nanoid"
 
-export const nameContext = createContext()
+//export const nameContext = createContext()
 
 // export function NameProvider({children}) {
 //     const [playerName, setPlayerName] = useState("zona")
