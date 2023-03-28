@@ -3,11 +3,16 @@ import { nanoid } from "nanoid"
 
 export const nameContext = createContext()
 
-export function NameProvider({children}) {
-    return (
-        <nameContext.Provider value={{}}>{children}</nameContext.Provider>
-    )
-}
+// export function NameProvider({children}) {
+//     const [playerName, setPlayerName] = useState("zona")
+
+//     const displayPlayerName = (name) => {
+//         setPlayerName((prevState) => name)
+//     }
+//     return (
+//         <nameContext.Provider value={{playerName, displayPlayerName}}>{children}</nameContext.Provider>
+//     )
+// }
 
 export default function Start({displayGame}) {
 
