@@ -10,7 +10,7 @@ import dice4 from './faces/dice4.png';
 import dice5 from './faces/dice5.png';
 import dice6 from './faces/dice6.png';
 import Start from './components/Start';
-import { nameContext } from './components/Start';
+import { nameContext, NameProvider } from './components/Start';
 import './App.css';
 
 
@@ -96,6 +96,7 @@ function App() {
 
   return (
     <div className="app">
+      <NameProvider>
       {game.pageview === 'index' && <Start displayGame={displayGame}/>}
       {game.pageview === 'dies' && <>
       <main>
@@ -126,6 +127,7 @@ function App() {
       
     </aside>
     </> }
+    </NameProvider>
     </div>
     
   );
