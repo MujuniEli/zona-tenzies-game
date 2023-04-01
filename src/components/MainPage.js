@@ -1,15 +1,18 @@
 import { useState,useEffect, useContext } from 'react';
-import Die from "./components/Die"
+import Die from "./Die"
 import { nanoid } from 'nanoid'
-import dice1 from './faces/dice1.png';
-import dice2 from './faces/dice2.png';
-import dice3 from './faces/dice3.png';
-import dice4 from './faces/dice4.png';
-import dice5 from './faces/dice5.png';
-import dice6 from './faces/dice6.png';
+import dice1 from '../faces/dice1.png';
+import dice2 from '../faces/dice2.png';
+import dice3 from '../faces/dice3.png';
+import dice4 from '../faces/dice4.png';
+import dice5 from '../faces/dice5.png';
+import dice6 from '../faces/dice6.png';
 import Confetti from 'react-confetti'
+import  { AppContext } from "./ContextAPI"
 
 const MainPage = () => {
+
+    const { player, playerList } = useContext(AppContext)
 
     const [dice, setDice] = useState(allNewDice())
   const [tenzies, setTenzies] = useState(false)
@@ -91,7 +94,7 @@ const MainPage = () => {
       {tenzies && <Confetti />}
       <h1 className='title'>zona's Tenzies</h1>
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-      <p><b>Elijah</b> is playing</p>
+      <p><b>{player.playerName}</b> is playing</p>
       <div className="dice-container">
         {newNumbers}
       </div>
@@ -100,18 +103,22 @@ const MainPage = () => {
     </main>
     <aside className="stats">
       <h3>Player Stats</h3>
-      <section className="player-details">
+    {playerList.map(({playerName, rollCount}) => (
+
+        <section className="player-details">
         <div className="name-side">
         <h4 className='details--heading'>Name</h4>
-        <p className='player-name'>Elijah</p>
+        <p className='player-name'>{playerName}</p>
         </div>
         
         <div className="roll-side">
         <h4 className='details--heading'>Roll Count</h4>
-        <p className='player-roll-count'>7</p>
+        <p className='player-roll-count'>{rollCount}</p>
         </div>
         
       </section>
+      ))}
+      
       
     </aside>
     </>

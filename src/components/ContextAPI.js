@@ -5,10 +5,15 @@ export const AppContext = createContext()
 const AppContextProvider = (props) => {
 
     const [player, setPlayer] = useState({
-        playerName: "",
+        playerName: "Zack",
         rollCount: 0
     })
-    const [playerList, setPlayerList] = useState([])
+    const [playerList, setPlayerList] = useState([
+        {
+            playerName: "Jerry",
+            rollCount: 9
+        }
+    ])
 
     return (
         <AppContext.Provider
