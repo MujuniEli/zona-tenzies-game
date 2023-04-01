@@ -12,9 +12,9 @@ import { AppContext } from "./ContextAPI";
 
 const MainPage = () => {
 
-  const { player, playerList } = useContext(AppContext);
+  const { player, playerList, updatePlayer } = useContext(AppContext);
 
-  const [playing, setPlayer] = useState(playerList.length!=0?playerList[0]:player)
+  const [playing, setPlaying] = useState(playerList.length!=0?playerList[0]:player)
   const [dice, setDice] = useState(allNewDice());
   const [tenzies, setTenzies] = useState(false);
   const [count, setCount] = useState(0);
@@ -29,7 +29,6 @@ const MainPage = () => {
 
     if (allHeld && allSameValues) {
       setTenzies(true);
-      // handleGameRound
 
     }
   }, [dice]);
@@ -63,7 +62,8 @@ const MainPage = () => {
       setCount((currentCount) => {
         return currentCount + 1;
       });
-    } else {
+    } else {      
+      handleGameRounds()
       setTenzies(false);
       setDice(allNewDice());
       setCount(0);
@@ -88,14 +88,24 @@ const MainPage = () => {
   ));
 
   const handleGameRounds = () => {
-    setPlayer({
+    setPlaying({
       id: playing.id,
       playName: playing.playName,
       rollCount: count,
       gameRound: gameRound
     })
-    
-
+    updatePlayer({
+      id: playing.id,
+      playName: playing.playName,
+      rollCount: count,
+      gameRound: gameRound
+    })
+    if(playing.id === playerList[playerList.length-1].id){
+      setGameRound(gameRound+1)      
+      setPlaying(playerList[0])
+    } else {
+      setPlaying(playerList[playerList.indexOf(playing)+1])
+    }
   }
 
   return (

@@ -13,7 +13,12 @@ const AppContextProvider = (props) => {
     const [playerList, setPlayerList] = useState([])
 
     const updatePlayer = (playerData) => {
-        
+        let oldPlayer = playerList.find(obj => {
+            return obj.id === playerData.id
+        })
+        let allPlayers = playerList
+        allPlayers[allPlayers.indexOf(oldPlayer)] = playerData
+        setPlayerList(allPlayers)
     }
 
     return (
@@ -22,7 +27,8 @@ const AppContextProvider = (props) => {
             player,
             setPlayer,
             playerList,
-            setPlayerList
+            setPlayerList,
+            updatePlayer
         }}
         >
             {props.children}
