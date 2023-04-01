@@ -19,7 +19,9 @@ const AppContextProvider = (props) => {
         <AppContext.Provider
         value={{
             player,
-            playerList
+            setPlayer,
+            playerList,
+            setPlayerList
         }}
         >
             {props.children}

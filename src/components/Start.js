@@ -1,21 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import { AppContext } from "./ContextAPI"
 import { nanoid } from "nanoid"
 
-//export const nameContext = createContext()
 
-// export function NameProvider({children}) {
-//     const [playerName, setPlayerName] = useState("zona")
-
-//     const displayPlayerName = (name) => {
-//         setPlayerName((prevState) => name)
-//     }
-//     return (
-//         <nameContext.Provider value={{playerName, displayPlayerName}}>{children}</nameContext.Provider>
-//     )
-// }
 
 export default function Start({displayGame}) {
-
+    
     const [playerList, setPlayerList] = useState([])
     const [player, setPlayer] = useState("")
   
