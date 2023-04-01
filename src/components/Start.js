@@ -5,22 +5,22 @@ import { nanoid } from "nanoid"
 
 
 export default function Start({displayGame}) {
-    
-    const [playerList, setPlayerList] = useState([])
-    const [player, setPlayer] = useState("")
+    const { player, setPlayer, playerList, setPlayerList } = useContext(AppContext)
   
   
     function handleChange(e) {
         setPlayer({
             id: '',
-            playerName: e.target.value
+            playerName: e.target.value,
+            rollCount: 0
       })
     }
 
     const addPlayer = (e) => {
         const new_player = {
             id: nanoid(),
-            playerName: player.playerName
+            playerName: player.playerName,
+            rollCount: player.rollCount
         }
         setPlayerList([...playerList, new_player])
     }
